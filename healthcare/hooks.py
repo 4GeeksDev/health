@@ -310,11 +310,4 @@ company_data_to_be_ignored = [
 	"Healthcare Service Unit",
 ]
 
-# Oculta workspaces innecesarios del escritorio por defecto
-fixtures = [
-    {"doctype": "Workspace", "filters": [["module", "in", [
-        "Manufacturing", "Projects", "CRM", "Support", "Website", "Education", "Non Profit", "Agriculture"
-    ]]]}
-]
-
 after_install = "healthcare.setup.setup_healthcare"
