@@ -313,5 +313,6 @@ company_data_to_be_ignored = [
 fixtures = [
     {"doctype": "Workspace", "filters": [["module", "in", [
         "Manufacturing", "Projects", "CRM", "Support", "Website", "Education", "Non Profit", "Agriculture"
-    ]]]}
+    ]]]},
+    "Module Profile"
 ]
