@@ -310,4 +310,8 @@ company_data_to_be_ignored = [
 	"Healthcare Service Unit",
 ]
 
-after_install = "healthcare.setup.setup_healthcare"
+fixtures = [
+    {"doctype": "Workspace", "filters": [["module", "in", [
+        "Manufacturing", "Projects", "CRM", "Support", "Website", "Education", "Non Profit", "Agriculture"
+    ]]]}
+]
