@@ -2,6 +2,7 @@
 import frappe
 from erpnext.setup.utils import insert_record
 from frappe import _
+from healthcare.config.setup_visibility import setup_4geeks_health_visibility
 
 data = {
 	"desktop_icons": [
@@ -155,6 +156,7 @@ def setup_healthcare():
 	create_default_root_service_units()
 
 	setup_domain()
+	setup_4geeks_health_visibility()
 
 	frappe.clear_cache()
 
