@@ -80,7 +80,7 @@ jinja = {
 # ------------
 
 # before_install = "healthcare.install.before_install"
-after_install = "healthcare.setup.setup_all.setup_all"
+after_install = "healthcare.healthcare.setup.setup_all.setup_all"
 
 # Uninstallation
 # ------------
