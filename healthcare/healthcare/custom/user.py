@@ -42,6 +42,7 @@ def ensure_default_module_profile():
 
 
 def assign_default_module_profile(doc, method):
+	frappe.logger().info(f"Assigning Default Restricted to user {doc.name}")
 	# Asegurarse que el perfil existe
 	ensure_default_module_profile()
 
