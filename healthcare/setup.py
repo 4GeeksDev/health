@@ -2,6 +2,7 @@
 import frappe
 from erpnext.setup.utils import insert_record
 from frappe import _
+from healthcare.healthcare.custom.user import ensure_default_module_profile
 
 data = {
 	"desktop_icons": [
@@ -155,6 +156,8 @@ def setup_healthcare():
 	create_default_root_service_units()
 
 	setup_domain()
+
+	ensure_default_module_profile()
 
 	frappe.clear_cache()
 
