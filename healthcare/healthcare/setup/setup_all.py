@@ -1,5 +1,5 @@
-from healthcare.setup import setup_healthcare
-from healthcare.module_profile_setup.setup_module_profiles import setup_module_profiles
+from ..module_profile_setup.setup_module_profiles import setup_module_profiles
+from ..setup import setup_healthcare
 
 
 def setup_all():
