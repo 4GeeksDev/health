@@ -137,7 +137,7 @@ doc_events = {
 		"after_insert": "healthcare.regional.india.abdm.utils.set_consent_attachment_details"
 	},
 	"User": {
-		"validate": "healthcare.healthcare.custom.user.assign_default_module_profile"
+		"after_insert": "healthcare.healthcare.custom.user.assign_default_module_profile"
 	},
 	"Payment Entry": {
 		"on_submit": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
