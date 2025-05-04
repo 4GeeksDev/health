@@ -81,7 +81,6 @@ jinja = {
 
 # before_install = "healthcare.install.before_install"
 after_install = "healthcare.setup.setup_healthcare"
-after_install = "healthcare.module_profile_setup.setup_module_profiles"
 
 # Uninstallation
 # ------------
@@ -137,6 +136,9 @@ doc_events = {
 	"Patient": {
 		"after_insert": "healthcare.regional.india.abdm.utils.set_consent_attachment_details"
 	},
+    "User": {
+ 		"after_insert": "healthcare.healthcare.custom.user.assign_default_module_profile"
+ 	},
 	"Payment Entry": {
 		"on_submit": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
 		"on_cancel": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
