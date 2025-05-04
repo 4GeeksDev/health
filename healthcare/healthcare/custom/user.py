@@ -1,12 +1,13 @@
 import frappe
 
 def ensure_default_module_profile():
+	# Eliminar si ya existe (esto es lo que te está bloqueando)
 	if frappe.db.exists("Module Profile", "Default Restricted"):
-		return
+		frappe.delete_doc("Module Profile", "Default Restricted", force=1)
 
+	# Ahora crear el perfil con módulos bloqueados
 	profile = frappe.new_doc("Module Profile")
-	profile.module_profile_name = "Default Restricted"  # campo correcto
-	profile.restrict_to_domain = ""
+	profile.module_profile_name = "Default Restricted"
 	profile.blocked_modules = [
 		{"module": "Manufacturing"},
 		{"module": "Agriculture"},
@@ -42,11 +43,9 @@ def ensure_default_module_profile():
 
 
 def assign_default_module_profile(doc, method):
-	frappe.logger().info(f"Assigning Default Restricted to user {doc.name}")
-	# Asegurarse que el perfil existe
+	frappe.logger("healthcare").info(f"Assigning Default Restricted to user {doc.name}")
 	ensure_default_module_profile()
 
-	# Asignar perfil si el usuario no tiene
 	if not doc.module_profile:
 		doc.module_profile = "Default Restricted"
 		doc.save(ignore_permissions=True)
