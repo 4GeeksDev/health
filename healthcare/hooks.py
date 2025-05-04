@@ -80,7 +80,7 @@ jinja = {
 # ------------
 
 # before_install = "healthcare.install.before_install"
-after_install = "healthcare.setup.setup_healthcare"
+after_install = "healthcare.setup.setup_all.setup_all"
 
 # Uninstallation
 # ------------
@@ -135,9 +135,6 @@ doc_events = {
 	},
 	"Patient": {
 		"after_insert": "healthcare.regional.india.abdm.utils.set_consent_attachment_details"
-	},
-	"User": {
-		"after_insert": "healthcare.healthcare.custom.user.assign_default_module_profile"
 	},
 	"Payment Entry": {
 		"on_submit": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
@@ -311,15 +308,5 @@ treeviews = [
 
 company_data_to_be_ignored = [
 	"Healthcare Service Unit",
-]
-
-fixtures = [
-    {
-        "doctype": "Workspace",
-        "filters": [["module", "in", [
-            "Manufacturing", "Projects", "CRM", "Support", "Website", "Education", "Non Profit", "Agriculture"
-        ]]]
-    },
-    "Module Profile"
 ]
 
