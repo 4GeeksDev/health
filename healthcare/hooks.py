@@ -136,9 +136,9 @@ doc_events = {
 	"Patient": {
 		"after_insert": "healthcare.regional.india.abdm.utils.set_consent_attachment_details"
 	},
-    "User": {
- 		"after_insert": "healthcare.healthcare.custom.user.assign_default_module_profile"
- 	},
+    # "User": {
+ 	# 	"after_insert": "healthcare.healthcare.custom.user.assign_default_module_profile"
+ 	# },
 	"Payment Entry": {
 		"on_submit": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
 		"on_cancel": "healthcare.healthcare.custom_doctype.payment_entry.set_paid_amount_in_treatment_counselling",
@@ -314,3 +314,5 @@ company_data_to_be_ignored = [
 ]
 
 override_workspace = "healthcare/config/workspace.json"
+
+after_install = "healthcare.setup.setup_module_profile.create_default_module_profile"
