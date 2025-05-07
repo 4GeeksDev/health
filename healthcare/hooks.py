@@ -313,3 +313,4 @@ company_data_to_be_ignored = [
 	"Healthcare Service Unit",
 ]
 
+override_workspace = "healthcare/config/workspace.json"
