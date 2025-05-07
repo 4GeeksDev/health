@@ -315,4 +315,4 @@ company_data_to_be_ignored = [
 
 override_workspace = "healthcare/config/workspace.json"
 
-after_install = "healthcare.setup.setup_module_profile.create_default_module_profile"
+after_install = "healthcare.install.setup_module_profile.create_default_module_profile"
