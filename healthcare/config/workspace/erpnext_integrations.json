@@ -1,14 +1,14 @@
 {
   "doctype": "Workspace",
   "name": "ERPNext Integrations",
-  "module": "Custom",
   "label": "4Geeks Integrations",
+  "module": "Integrations",
   "public": 1,
-  "is_hidden": 0,
+  "is_hidden": 1,
   "icon": "integration",
+  "content": "[]",
   "links": [],
   "charts": [],
   "shortcuts": [],
-  "content": "[]",
   "title": "4Geeks Integrations"
 }

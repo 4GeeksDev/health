@@ -1,14 +1,14 @@
 {
   "doctype": "Workspace",
   "name": "CRM",
-  "module": "CRM",
   "label": "CRM",
+  "module": "CRM",
   "public": 1,
   "is_hidden": 1,
   "icon": "crm",
-  "links": [],
-  "shortcuts": [],
-  "charts": [],
   "content": "[]",
+  "links": [],
+  "charts": [],
+  "shortcuts": [],
   "title": "CRM"
 }

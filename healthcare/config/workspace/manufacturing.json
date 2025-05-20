@@ -1,14 +1,14 @@
 {
   "doctype": "Workspace",
   "name": "Manufacturing",
-  "module": "Manufacturing",
   "label": "Manufacturing",
+  "module": "Manufacturing",
   "public": 1,
   "is_hidden": 1,
-  "icon": "octicon octicon-tools",
-  "links": [],
-  "shortcuts": [],
-  "charts": [],
+  "icon": "manufacturing",
   "content": "[]",
+  "links": [],
+  "charts": [],
+  "shortcuts": [],
   "title": "Manufacturing"
 }
