@@ -81,7 +81,6 @@ jinja = {
 
 # before_install = "healthcare.install.before_install"
 after_install = "healthcare.setup.setup_healthcare"
-
 # Uninstallation
 # ------------
 
@@ -313,6 +312,3 @@ company_data_to_be_ignored = [
 	"Healthcare Service Unit",
 ]
 
-override_workspace_config = "health.config.workspace"
-
-after_install = "healthcare.install.setup_module_profile.create_default_module_profile"
