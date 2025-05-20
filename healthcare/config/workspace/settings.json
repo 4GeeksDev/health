@@ -1,0 +1,14 @@
+{
+  "doctype": "Workspace",
+  "name": "Settings",
+  "module": "Custom",
+  "label": "Settings",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "setting",
+  "links": [],
+  "charts": [],
+  "shortcuts": [],
+  "content": "[]",
+  "title": "Settings"
+}
