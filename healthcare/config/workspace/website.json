@@ -1,0 +1,14 @@
+{
+  "doctype": "Workspace",
+  "name": "Website",
+  "label": "Website",
+  "module": "Website",
+  "public": 1,
+  "is_hidden": 1,
+  "icon": "web",
+  "content": "[]",
+  "links": [],
+  "charts": [],
+  "shortcuts": [],
+  "title": "Website"
+}
