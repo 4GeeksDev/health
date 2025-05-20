@@ -8,8 +8,6 @@ def apply_custom_workspaces():
         "projects.json",
         "crm.json",
         "manufacturing.json",
-        "erpnext_integrations.json",
-        "settings.json",
         "website.json"
     ]
 
