@@ -5,29 +5,33 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new MutationObserver(() => {
     // 1. Cambia etiquetas del menú lateral
     document.querySelectorAll('.sidebar-item-label').forEach(label => {
-      if (label.textContent.includes("ERPNext")) {
-        label.textContent = label.textContent.replace("ERPNext", "").trim();
+      if (label.textContent.includes("ERPNext Settings")) {
+        label.textContent = label.textContent.replace("ERPNext Settings", "Settings").trim();
+      } else if (label.textContent.includes("ERPNext Integrations")) {
+        label.textContent = label.textContent.replace("ERPNext Integrations", "4Geeks Integrations").trim();
       }
     });
 
-    // 2. Cambia encabezados
-    document.querySelectorAll("h4, h3, .widget-title, .ellipsis").forEach(h => {
-      if (h.textContent.includes("ERPNext")) {
-        h.textContent = h.textContent.replace("ERPNext", "").trim();
+    // 2. Cambia títulos del dashboard (más específico)
+    document.querySelectorAll(".widget-title, .ellipsis").forEach(el => {
+      if (el.textContent.includes("ERPNext")) {
+        el.textContent = el.textContent.replace("ERPNext", "").trim();
       }
     });
 
-    // 3. Cambia párrafos, spans y divs
-    document.querySelectorAll("p, span, div").forEach(p => {
-      if (p.textContent.includes("ERPNext")) {
-        p.textContent = p.textContent.replace(/ERPNext/g, "").trim();
-      }
-    });
+    // ⚠️ Ya NO tocaremos todos los p, span y div indiscriminadamente
+    // Esto evita errores por modificar estructuras internas de Frappe
   });
 
-  // Observa cambios en todo el cuerpo del documento
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+  // Observa solo el menú lateral y el contenido principal
+  const sidebar = document.querySelector(".sidebar");
+  const content = document.querySelector(".page-container");
+  
+  if (sidebar) {
+    observer.observe(sidebar, { childList: true, subtree: true });
+  }
+
+  if (content) {
+    observer.observe(content, { childList: true, subtree: true });
+  }
 });
