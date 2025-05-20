@@ -1,6 +1,6 @@
 // sidebar_override.js
 setTimeout(() => {
-  console.log("✅ sidebar_override.js ejecutado con delay");
+  console.log("🏁 Custom script ejecutado correctamente"); // <- ¡Ahora sí!
 
   // Cambia etiquetas del menú lateral
   document.querySelectorAll('.sidebar-item-label').forEach(label => {
@@ -17,5 +17,7 @@ setTimeout(() => {
       el.textContent = el.textContent.replace("ERPNext", "").trim();
     }
   });
+
+  console.log("✅ sidebar_override.js ejecutado con delay");
 
 }, 1500); // Espera 1.5 segundos para asegurar que Frappe haya terminado de renderizar
