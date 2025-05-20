@@ -6,9 +6,52 @@
   "public": 1,
   "is_hidden": 1,
   "icon": "project",
-  "content": "[]",
+  "title": "Projects",
+  "charts": [
+    {
+      "chart_name": "Project Summary",
+      "label": "Open Projects"
+    }
+  ],
+  "content": "[{\"id\":\"VDMms0hapk\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Open Projects\",\"col\":12}},{\"id\":\"7Mbx6I5JUf\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"nyuMo9byw7\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"dILbX_r0ve\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Task\",\"col\":3}},{\"id\":\"JT8ntrqRiJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project\",\"col\":3}},{\"id\":\"RsafDhm1MS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Timesheet\",\"col\":3}},{\"id\":\"cVJH-gD0CR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Project Billing Summary\",\"col\":3}},{\"id\":\"DbctrdmAy1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"jx5aPK9aXN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Learn Project Management\",\"col\":3}},{\"id\":\"ncIHWGQQvX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oGhjvYjfv-\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"TdsgJyG3EI\",\"type\":\"card\",\"data\":{\"card_name\":\"Projects\",\"col\":4}},{\"id\":\"nIc0iyvf1T\",\"type\":\"card\",\"data\":{\"card_name\":\"Time Tracking\",\"col\":4}},{\"id\":\"8G1if4jsQ7\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"o7qTNRXZI8\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
   "links": [],
-  "charts": [],
-  "shortcuts": [],
-  "title": "Projects"
+  "shortcuts": [
+    {
+      "color": "Blue",
+      "format": "{} Assigned",
+      "label": "Task",
+      "link_to": "Task",
+      "stats_filter": "{\"_assign\": [\"like\", '%' + frappe.session.user + '%'], \"status\": \"Open\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Blue",
+      "format": "{} Open",
+      "label": "Project",
+      "link_to": "Project",
+      "stats_filter": "{\"status\": \"Open\"}",
+      "type": "DocType"
+    },
+    {
+      "label": "Timesheet",
+      "link_to": "Timesheet",
+      "type": "DocType"
+    },
+    {
+      "label": "Timesheet Billing Summary",
+      "link_to": "Timesheet Billing Summary",
+      "type": "Report"
+    },
+    {
+      "label": "Dashboard",
+      "link_to": "Project",
+      "type": "Dashboard"
+    },
+    {
+      "label": "Learn Project Management",
+      "link_to": "https://school.frappe.io/lms/courses/project-management?utm_source=in_app",
+      "type": "URL",
+      "color": "Grey"
+    }
+  ]
 }
