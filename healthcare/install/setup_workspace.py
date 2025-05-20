@@ -24,6 +24,7 @@ def apply_custom_workspaces():
         if frappe.db.exists("Workspace", workspace_name):
             doc = frappe.get_doc("Workspace", workspace_name)
             doc.update(data)
+            doc.is_hidden = 1
             doc.flags.ignore_permissions = True
             doc.flags.ignore_links = True
             doc.save(ignore_version=True)
