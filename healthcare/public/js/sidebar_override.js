@@ -1,37 +1,21 @@
 // sidebar_override.js
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("✅ sidebar_override.js cargado");
+setTimeout(() => {
+  console.log("✅ sidebar_override.js ejecutado con delay");
 
-  const observer = new MutationObserver(() => {
-    // 1. Cambia etiquetas del menú lateral
-    document.querySelectorAll('.sidebar-item-label').forEach(label => {
-      if (label.textContent.includes("ERPNext Settings")) {
-        label.textContent = label.textContent.replace("ERPNext Settings", "Settings").trim();
-      } else if (label.textContent.includes("ERPNext Integrations")) {
-        label.textContent = label.textContent.replace("ERPNext Integrations", "4Geeks Integrations").trim();
-      }
-    });
-
-    // 2. Cambia títulos del dashboard (más específico)
-    document.querySelectorAll(".widget-title, .ellipsis").forEach(el => {
-      if (el.textContent.includes("ERPNext")) {
-        el.textContent = el.textContent.replace("ERPNext", "").trim();
-      }
-    });
-
-    // ⚠️ Ya NO tocaremos todos los p, span y div indiscriminadamente
-    // Esto evita errores por modificar estructuras internas de Frappe
+  // Cambia etiquetas del menú lateral
+  document.querySelectorAll('.sidebar-item-label').forEach(label => {
+    if (label.textContent.includes("ERPNext Settings")) {
+      label.textContent = "Settings";
+    } else if (label.textContent.includes("ERPNext Integrations")) {
+      label.textContent = "4Geeks Integrations";
+    }
   });
 
-  // Observa solo el menú lateral y el contenido principal
-  const sidebar = document.querySelector(".sidebar");
-  const content = document.querySelector(".page-container");
-  
-  if (sidebar) {
-    observer.observe(sidebar, { childList: true, subtree: true });
-  }
+  // Cambia encabezados específicos
+  document.querySelectorAll(".widget-title, .ellipsis").forEach(el => {
+    if (el.textContent.includes("ERPNext")) {
+      el.textContent = el.textContent.replace("ERPNext", "").trim();
+    }
+  });
 
-  if (content) {
-    observer.observe(content, { childList: true, subtree: true });
-  }
-});
+}, 1500); // Espera 1.5 segundos para asegurar que Frappe haya terminado de renderizar
