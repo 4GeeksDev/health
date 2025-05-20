@@ -1,0 +1,14 @@
+{
+  "doctype": "Workspace",
+  "name": "Projects",
+  "module": "Projects",
+  "label": "Projects",
+  "public": 1,
+  "is_hidden": 1,
+  "icon": "octicon octicon-project",
+  "links": [],
+  "shortcuts": [],
+  "charts": [],
+  "content": "[]",
+  "title": "Projects"
+}
