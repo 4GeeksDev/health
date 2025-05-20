@@ -1,3 +1,8 @@
+import frappe
+import json
+import os
+
+
 def apply_custom_workspaces():
     workspace_path = frappe.get_app_path("healthcare", "config", "workspace")
     filenames = ["projects.json", "crm.json", "manufacturing.json", "erpnext_integrations.json", "settings.json"]
