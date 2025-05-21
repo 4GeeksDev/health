@@ -8,7 +8,7 @@ def apply_custom_workspaces():
         "projects.json",
         "crm.json",
         "manufacturing.json",
-        "website.json"
+        "website.json",
         "support.json"
     ]
 
