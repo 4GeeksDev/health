@@ -9,6 +9,7 @@ def apply_custom_workspaces():
         "crm.json",
         "manufacturing.json",
         "website.json"
+        "support.json"
     ]
 
     for filename in filenames:

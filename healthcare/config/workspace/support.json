@@ -1,0 +1,39 @@
+{
+  "doctype": "Workspace",
+  "name": "Support",
+  "label": "Support",
+  "module": "Support",
+  "public": 1,
+  "is_hidden": 1,
+  "icon": "support",
+  "title": "Support",
+  "charts": [],
+  "content": "[{\"id\":\"qzP2mZrGOu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"Fkdjo6bJ7A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Issue\",\"col\":3}},{\"id\":\"OTS8kx2f3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Visit\",\"col\":3}},{\"id\":\"smDTSjBR3Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Level Agreement\",\"col\":3}},{\"id\":\"WCqL_gBYGU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxhWhXp9b2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\":12}},{\"id\":\"Ff8Ab3nLLN\",\"type\":\"card\",\"data\":{\"card_name\":\"Issues\",\"col\":4}},{\"id\":\"_lndiuJTVP\",\"type\":\"card\",\"data\":{\"card_name\":\"Maintenance\",\"col\":4}},{\"id\":\"R_aNO5ESzJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Service Level Agreement\",\"col\":4}},{\"id\":\"N8aA2afWfi\",\"type\":\"card\",\"data\":{\"card_name\":\"Warranty\",\"col\":4}},{\"id\":\"M5fxGuFwUR\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"xKH0kO9q4P\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+  "links": [],
+  "shortcuts": [
+    {
+      "color": "Yellow",
+      "label": "Issue",
+      "link_to": "Issue",
+      "stats_filter": "{\"_assign\": [\"like\", '%'+frappe.session.user+'%'], \"status\": \"Open\"}",
+      "type": "DocType"
+    },
+    {
+      "color": "Yellow",
+      "label": "Maintenance Visit",
+      "link_to": "Maintenance Visit",
+      "type": "DocType"
+    },
+    {
+      "color": "Yellow",
+      "label": "Service Level Agreement",
+      "link_to": "Service Level Agreement",
+      "type": "DocType"
+    },
+    {
+      "label": "First Response Time for Issues",
+      "link_to": "First Response Time for Issues",
+      "type": "Report"
+    }
+  ]
+}
