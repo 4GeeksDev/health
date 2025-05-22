@@ -19,7 +19,7 @@ def apply_custom_workspaces():
 
         workspace_name = data.get("name")
 
-        # Si el Workspace ya existe, actualízalo
+        # If the Workspace already exists, update it
         if frappe.db.exists("Workspace", workspace_name):
             doc = frappe.get_doc("Workspace", workspace_name)
             doc.update(data)
@@ -28,7 +28,7 @@ def apply_custom_workspaces():
             doc.flags.ignore_links = True
             doc.save(ignore_version=True)
         else:
-            # Si no existe, insertarlo como nuevo
+            # If it doesn't exist, insert it as new
             doc = frappe.get_doc(data)
             doc.flags.ignore_permissions = True
             doc.flags.ignore_links = True
